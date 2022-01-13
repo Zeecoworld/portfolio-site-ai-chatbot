@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ask Isaac Dev Portfolio</title>
+
+<style id="" media="all">@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url(/fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsunDXbtY.ttf) format('truetype');
+}
+</style>
+<style id="" media="all">@font-face {
+  font-family: 'Alice';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts.gstatic.com/s/alice/v12/OpNCnoEEmtHa6GcOrgs.ttf) format('truetype');
+}
+</style>
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/style1.css' %}" /> 
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+
+<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+<div id="booking" class="section">
+<div class="section-center">
+<div class="container">
+<div class="row">
+<div class="booking-form">
+<div class="booking-bg">
+<div class="form-header">
+<h2>Make your Request</h2>
+<p>We offer Afforable Services to our esteemed customers and clients because we believe in our customers value and satisfaction</p>
+</div>
+</div>
+            <form method="POST" action="">
+                  {% csrf_token %}
+                        <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                        <span class="form-label">First Name</span>
+                        <input type="text" class="form-control" name="firstname">
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                        <span class="form-label">Last Name</span>
+                        <input type="text" class="form-control" name="lastname">
+                        </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                        <span class="form-label">Email</span>
+                        <input type="email" rows="6" class="form-control" name="email">
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <span class="form-label">Our Services</span>
+                        <select class="form-control" name="services" required>
+                        <option value="" selected hidden>Select what which services you need</option>
+                        <option>Website Development</option>
+                        <option>Software Application Development</option>
+                        <option>Data Analysis</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                        <span class="form-label">Your Message</span>
+                        <textarea class="form-control" name="message" rows="14"></textarea>
+                        </div>
+                        </div>
+                        <div class="form-btn">
+                        <button class="submit-btn">Send</button>
+                        </div>
+            </form> 
+</div>
+</div>
+</div>
+</div>
+</div>
+          <div class="container">
+                <div class="chatbox">
+                  <div class="chatbox__support">
+                      <div class="chatbox__header">
+                          <div class="chatbox__image--header">
+                              <img src="{% static 'img/zeecobot-avatar.png' %}" alt="image">
+                          </div>
+                          <div class="chatbox__content--header">
+                              <h4 class="chatbox__heading--header">Chat support</h4>
+                              <p class="chatbox__description--header">Hi. My name is Zeecobot. How can I help you?</p>
+                          </div>
+                      </div>
+                      <div class="chatbox__messages">
+                          <div></div>
+                      </div>
+                      <div class="chatbox__footer">
+                          <input type="text" placeholder="Write a message...">
+                          <button class="chatbox__send--footer send__button">Send</button>
+                      </div>
+                  </div>
+                  <div class="chatbox__button">
+                      <button><img src="{% static 'img/chatbox-icon.svg' %}" /></button>
+                  </div>
+                </div>
+          </div>
+<script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
